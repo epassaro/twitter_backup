@@ -24,9 +24,14 @@ jobs:
       - name: Check if secrets are working
         shell: bash -l {0}
         run: |
-          echo $CONSUMER_KEY; echo $CONSUMER_SECRET; echo $ACCESS_TOKEN_KEY; echo $ACCESS_TOKEN_SECRET
+          python -m main.py
         env:
           CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
           CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
           ACCESS_TOKEN_KEY: ${{ secrets.ACCESS_TOKEN_KEY }}
           ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
+
+      - uses: actions/upload-artifact@v1
+        with:
+          name: friends-list
+          path: friends.csv 
