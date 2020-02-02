@@ -7,7 +7,6 @@ on:
 
 jobs:
   release:
-
     name: Main job
     runs-on: ubuntu-latest
     steps:
@@ -17,7 +16,17 @@ jobs:
       - name: Create environment
         uses: goanpeca/setup-miniconda@v1.0.2
         with:
-           auto-update-conda: True
-           activate-environment: twitter
-           environment-file: environment.yml
-           auto-activate-base: False
+          auto-update-conda: True
+          activate-environment: twitter
+          environment-file: environment.yml
+          auto-activate-base: False
+
+      - name: Check if secrets are working
+        shell: bash -l {0}
+        run: |
+          echo $CONSUMER_KEY; echo $CONSUMER_SECRET; echo $ACCESS_TOKEN_KEY; echo $ACCESS_TOKEN_SECRET
+        env:
+          CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+          CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
+          ACCESS_TOKEN_KEY: ${{ secrets.ACCESS_TOKEN_KEY }}
+          ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
