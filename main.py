@@ -3,8 +3,8 @@ import twitter
 
 CONSUMER_KEY = os.environ['CONSUMER_KEY']
 CONSUMER_SECRET = os.environ['CONSUMER_SECRET']
-CONSUMER_KEY = os.environ['ACCESS_TOKEN_KEY']
-CONSUMER_KEY = os.environ['ACCESS_TOKEN_SECRET']
+ACCESS_TOKEN_KEY = os.environ['ACCESS_TOKEN_KEY']
+ACCESS_TOKEN_SECRET = os.environ['ACCESS_TOKEN_SECRET']
 
 api = twitter.Api(consumer_key=CONSUMER_SECRET,
                   consumer_secret=CONSUMER_SECRET,

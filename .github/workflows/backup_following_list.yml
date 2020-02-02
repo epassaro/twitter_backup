@@ -21,7 +21,7 @@ jobs:
           environment-file: environment.yml
           auto-activate-base: False
 
-      - name: Check if secrets are working
+      - name: Run main script
         shell: bash -l {0}
         run: |
           python -m main.py
