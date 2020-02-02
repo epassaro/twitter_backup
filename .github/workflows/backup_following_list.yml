@@ -1,0 +1,23 @@
+name: Backup Twitter Following List
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+
+    name: Main job
+    runs-on: ubuntu-latest
+    steps:
+      # Every step starts with '-'
+      - uses: actions/checkout@v2
+
+      - name: Create environment
+        uses: goanpeca/setup-miniconda@v1.0.2
+        with:
+           auto-update-conda: True
+           activate-environment: twitter
+           environment-file: environment.yml
+           auto-activate-base: False
