@@ -6,6 +6,11 @@ CONSUMER_SECRET = os.environ['CONSUMER_SECRET']
 ACCESS_TOKEN_KEY = os.environ['ACCESS_TOKEN_KEY']
 ACCESS_TOKEN_SECRET = os.environ['ACCESS_TOKEN_SECRET']
 
+print(CONSUMER_KEY)
+print(CONSUMER_SECRET)
+print(ACCESS_TOKEN_KEY)
+print(ACCESS_TOKEN_SECRET)
+
 api = twitter.Api(consumer_key=CONSUMER_SECRET,
                   consumer_secret=CONSUMER_SECRET,
                   access_token_key=ACCESS_TOKEN_KEY,
