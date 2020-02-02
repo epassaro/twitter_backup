@@ -1,5 +1,6 @@
 import os
 import twitter
+import pandas as pd
 
 CONSUMER_KEY = os.environ['CONSUMER_KEY']
 CONSUMER_SECRET = os.environ['CONSUMER_SECRET']
@@ -12,5 +13,5 @@ api = twitter.Api(consumer_key=CONSUMER_KEY,
                   access_token_secret=ACCESS_TOKEN_SECRET)
 
 friends = api.GetFriends(user_id='epassaro')
-friends_df = pd.DataFrame(friends)
+friends_df = pd.DataFrame(friends, columns=['friends'])
 friends_df.to_csv('friends.csv')
