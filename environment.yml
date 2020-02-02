@@ -6,6 +6,7 @@ channels:
 dependencies:
   - python=3.6
   - pip
+  - pandas
   - jupyter
   - pip:
-    - python-twitter==3.5
+      - python-twitter==3.5
