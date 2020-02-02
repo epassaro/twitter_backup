@@ -1,0 +1,11 @@
+name: twitter
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.6
+  - pip
+  - jupyter
+  - pip:
+    - python-twitter==3.5
