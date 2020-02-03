@@ -32,5 +32,5 @@ jobs:
 
       - uses: actions/upload-artifact@v1
         with:
-          name: friends-list
+          name: epassaros-friends
           path: epassaros_friends.csv
