@@ -26,7 +26,7 @@ jobs:
       - name: Run main script
         shell: bash -l {0}
         run: |
-          python -m main.py
+          python -m main
         env:
           CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
           CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
