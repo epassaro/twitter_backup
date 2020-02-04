@@ -1,4 +1,4 @@
-name: Backup Twitter Following List
+name: Friends Backup
 
 on:
   schedule:
