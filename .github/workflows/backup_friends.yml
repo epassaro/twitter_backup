@@ -2,7 +2,7 @@ name: Friends Backup
 
 on:
   schedule:
-    - cron: "0 4 * * *"
+    - cron: "0 0 * * 1"
 
 jobs:
   release:
